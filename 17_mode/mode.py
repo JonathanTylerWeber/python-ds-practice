@@ -11,3 +11,15 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    highest_num = None
+    highest_count = 0
+    counts = {}
+    for num in nums:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+        if counts[num] > highest_count:
+            highest_num = num
+    return highest_num
+        
