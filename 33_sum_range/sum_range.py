@@ -1,4 +1,14 @@
 def sum_range(nums, start=0, end=None):
+    total_sum = 0
+    if end is None:
+        end = len(nums)
+    sublist = nums[start:end+1]
+    for num in sublist:
+        total_sum += num
+    return total_sum
+
+nums = [1, 2, 3, 4]
+    
     """Return sum of numbers from start...end.
 
     - start: where to start (if not provided, start at list start)
